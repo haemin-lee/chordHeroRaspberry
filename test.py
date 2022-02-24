@@ -12,8 +12,9 @@ GPIO.setup(buttonPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while(1):
     if GPIO.input(buttonPin): #button is pressed
+        GPIO.output(ledPin, GPIO.LOW)
+    else:
         GPIO.output(ledPin, GPIO.HIGH)
         x = requests.get(url)
         print(x.text)
-    else:
-        GPIO.output(ledPin, GPIO.HIGH)
+        
