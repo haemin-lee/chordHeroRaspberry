@@ -1,8 +1,8 @@
 import requests
 
-url = 'https://www.w3schools.com/python/demopage.php'
-myobj = {'somekey': 'somevalue'}
+url = 'https://chordhero-backend.herokuapp.com/'
 
-x = requests.post(url, data = myobj)
+x = requests.get(url)
 
+print("hello please work")
 print(x.text)
