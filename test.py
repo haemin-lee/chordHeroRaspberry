@@ -6,6 +6,7 @@ url = 'https://chordhero-backend.herokuapp.com/'
 
 ledPin = 21 
 buttonPin = 20
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin, GPIO.OUT)
 GPIO.setup(buttonPin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
