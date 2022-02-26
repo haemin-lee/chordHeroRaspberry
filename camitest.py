@@ -10,7 +10,7 @@ three = {'id': '2'}
 ledPin = 21 
 button1Pin = 20
 button2Pin = 26
-button3Pin = 19
+button3Pin = 16
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(ledPin, GPIO.OUT)
 GPIO.setup(button1Pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -25,7 +25,7 @@ while(1):
         time.sleep(0.2)
         GPIO.output(ledPin, GPIO.HIGH)
         a  = requests.post(url, json=one)
-        print(a)
+        print(a.text)
         #requests.post(url, data = song1)
         #upload song 1
 
