@@ -1,6 +1,6 @@
 import requests
 import RPi.GPIO as GPIO
-
+import time
 url = 'https://chordhero-backend.herokuapp.com/'
 
 
