@@ -34,7 +34,7 @@ while(1):
 
     elif GPIO.input(button3Pin) == 0: #button3 is pressed
         print("3")
-        GPIO.output(ledPint, GPIO.LOW)
+        GPIO.output(ledPin, GPIO.LOW)
         time.sleep(0.1)
         GPIO.output(ledPin, GPIO.HIGH)
         #requests.post(url, data = song3)
