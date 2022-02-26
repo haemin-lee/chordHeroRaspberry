@@ -16,21 +16,21 @@ GPIO.setup(button3Pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 while(1):
 
-    if GPIO.input(~button1Pin): #button2 is pressed
+    if GPIO.input(button1Pin): #button2 is pressed
         GPIO.output(ledPin, GPIO.LOW)
         time.sleep(0.1)
         GPIO.output(ledPin, GPIO.HIGH)
         #requests.post(url, data = song1)
         #upload song 1
 
-    elif GPIO.input(~button2Pin): #button2 is pressed
+    elif GPIO.input(button2Pin): #button2 is pressed
         GPIO.output(ledPin, GPIO.LOW)
         time.sleep(0.1)
         GPIO.output(ledPin, GPIO.HIGH)
         requests.post(url, data = song2)
         #upload song 2
 
-    elif GPIO.input(~button3Pin): #button3 is pressed
+    elif GPIO.input(button3Pin): #button3 is pressed
         GPIO.output(ledPint, GPIO.LOW)
         time.sleep(0.1)
         GPIO.output(ledPin, GPIO.HIGH)
