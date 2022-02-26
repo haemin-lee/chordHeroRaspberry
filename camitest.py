@@ -1,8 +1,11 @@
 import requests
 import RPi.GPIO as GPIO
 import time
-url = 'https://chordhero-backend.herokuapp.com/'
+url = 'https://chordhero-backend.herokuapp.com/getSong'
 
+one = {'id': '0'}
+two = {'id': '1'}
+three = {'id': '2'}
 
 ledPin = 21 
 button1Pin = 20
@@ -19,8 +22,10 @@ while(1):
     if GPIO.input(button1Pin) == 0: #button2 is pressed
         print("1")
         GPIO.output(ledPin, GPIO.LOW)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(ledPin, GPIO.HIGH)
+        a  = requests.post(url, json=one)
+        print(a)
         #requests.post(url, data = song1)
         #upload song 1
 
