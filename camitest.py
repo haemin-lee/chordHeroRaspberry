@@ -41,5 +41,5 @@ while(1):
         #upload song 3
 	
     else:
-        GPIO.output(ledPint, GPIO.LOW)
+        GPIO.output(ledPin, GPIO.LOW)
         
