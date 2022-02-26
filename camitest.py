@@ -37,4 +37,6 @@ while(1):
 	requests.post(url, data = song3)
 	#upload song 3
 	
+    else:
+        GPIO.output(ledPint, GPIO.LOW)
         
