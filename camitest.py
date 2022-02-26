@@ -32,16 +32,20 @@ while(1):
     elif GPIO.input(button2Pin) == 0: #button2 is pressed
         print("2")
         GPIO.output(ledPin, GPIO.LOW)
-        time.sleep(0.1)
+        time.sleep(0.2)
         GPIO.output(ledPin, GPIO.HIGH)
+        a  = requests.post(url, json=two)
+        print(a.text)
         #requests.post(url, data = song2)
         #upload song 2
 
     elif GPIO.input(button3Pin) == 0: #button3 is pressed
         print("3")
-        #GPIO.output(ledPin, GPIO.LOW)
-        #time.sleep(0.1)
-        #GPIO.output(ledPin, GPIO.HIGH)
+        GPIO.output(ledPin, GPIO.LOW)
+        time.sleep(0.2)
+        GPIO.output(ledPin, GPIO.HIGH)
+        a  = requests.post(url, json=three)
+        print(a.text)
         #requests.post(url, data = song3)
         #upload song 3
 	
