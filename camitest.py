@@ -1,5 +1,7 @@
+#!/usr/bin/env python3
 import requests
 import RPi.GPIO as GPIO
+import serial
 import time
 url = 'https://chordhero-backend.herokuapp.com/getSong'
 
