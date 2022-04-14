@@ -1,16 +1,25 @@
 import requests
 
 url = 'https://chordhero-backend.herokuapp.com/uploadNewSong'
-url2 = 'http://localhost:5000/getSong'
-myobj1 = {'name': 'twinkletwinkle', 'keys': [['C', 'D', 'F'], ['D', 'E', 'G'], ['C', 'F', 'A']]}
-myobj2 = {'name': 'silentnight', 'keys': [['C', 'D', 'F#'], ['D', 'E#', 'G'], ['C#', 'F', 'A']]}
-myobj3 = {'name': 'jinglebells', 'keys': [['C', 'A', 'D'], ['D', 'F', 'B'], ['C', 'A', 'A#']]}
+delete = 'https://chordhero-backend.herokuapp.com/deleteAll'
+#url = 'http://localhost:5000/uploadNewSong'
+#getSong = 'http://localhost:5000/getSong'
+getSong = 'https://chordhero-backend.herokuapp.com/getSong'
 
-obj = {'id': '0'}
+myobj1 = {'url': 'https://www.youtube.com/watch?v=bvWRMAU6V-c&ab_channel=DisneyMusicVEVO', 'keys': ["AMajor", "DMinor"]}
+myobj2 = {'url': 'https://www.youtube.com/watch?v=VF-r5TtlT9w&ab_channel=HarryStylesVEVO', 'keys': ["AMajor", "DMinor"]}
+myobj3 = {'url': 'https://www.youtube.com/watch?v=Dwzk-XZxZ4k&ab_channel=KALIUCHIS', 'keys': ["AMajor", "DMinor"]}
 
-x = requests.post(url, json = myobj1)
-y = requests.post(url, json = myobj2)
-z = requests.post(url, json = myobj3)
+one={'id':'0'}
+#x = requests.get(delete)
 
+'''x = requests.post(url, json = myobj1)
+x = requests.post(url, json = myobj2)
+x = requests.post(url, json = myobj3)'''
+
+x = requests.post(getSong, json=one)
+
+
+print(x.text)
 
 
